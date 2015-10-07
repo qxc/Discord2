@@ -1,0 +1,352 @@
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Bottomless Chest} 
+\cardcontent{Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Haste} 
+\cardcontent{While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.} 
+\cardimage{} 
+\cardprice{5} 
+\cardhp{3} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Wolf's Howl} 
+\cardcontent{\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.} 
+\cardimage{} 
+\cardprice{6} 
+\cardhp{5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Monstrous Inferno} 
+\cardcontent{\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.} 
+\cardimage{} 
+\cardprice{8} 
+\cardhp{7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Deck Smash} 
+\cardcontent{Each player destroys the top card of their deck or discard pile or loses 4 life.} 
+\cardimage{} 
+\cardprice{1} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Smash} 
+\cardcontent{If there are no supplies of cards costing more than 4, deal \Justice*5 \Damage. Otherwise, Destroy 2 cards from the highest cost supply costing more than 4. } 
+\cardimage{} 
+\cardprice{1} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Drain} 
+\cardcontent{Each player uncharges a conduit or loses 4 life. (You can't uncharge past your starting configuration)} 
+\cardimage{} 
+\cardprice{1} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Arcane Pig} 
+\cardcontent{\Cast Deal 5*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{1} 
+\cardhp{\Justice*2} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Morose Chicken} 
+\cardcontent{\Cast Deal 3*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{1} 
+\cardhp{\Justice*4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Sparking Fire} 
+\cardcontent{\Cast Deal 2*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{1} 
+\cardhp{\Justice*5} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Flicking Eyelid} 
+\cardcontent{\Cast Deal 9*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{2} 
+\cardhp{\Justice*6} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Salivating Sock} 
+\cardcontent{\Cast Deal 7*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{2} 
+\cardhp{\Justice*7} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Toothless Rock} 
+\cardcontent{\Cast Deal 11*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{2} 
+\cardhp{\Justice*4} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Lightning Storm} 
+\cardcontent{Prevent the first 6 damage dealt by each player this turn.} 
+\cardimage{} 
+\cardprice{2} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Corner Sword} 
+\cardcontent{Each player must immediately destroy 2 Amethyst in hand or take 6 damage.} 
+\cardimage{} 
+\cardprice{2} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Dispel} 
+\cardcontent{Each player discards their highest cost prepped spell or loses 6 life.} 
+\cardimage{} 
+\cardprice{2} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Hand Smash} 
+\cardcontent{Each player discards a boon in hand or loses 2 life.} 
+\cardimage{} 
+\cardprice{0} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Relic} 
+\cardtitle{Jade Rat Spy} 
+\cardcontent{Each player gains 1 Tainted Jade. For each Tainted Jade that can’t be gained, deal 2 damage.} 
+\cardimage{} 
+\cardprice{0} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Orange Horse} 
+\cardcontent{\Cast Deal 1*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{0} 
+\cardhp{\Justice*2} 
+\end{tikzpicture}
+\hspace{5mm}
+\begin{tikzpicture} 
+\cardbackground{Spell} 
+\cardtitle{Quickly Fight} 
+\cardcontent{\Cast Deal 2*\Justice \Damage.} 
+\cardimage{} 
+\cardprice{0} 
+\cardhp{\Justice} 
+\end{tikzpicture}
+\hspace{5mm}

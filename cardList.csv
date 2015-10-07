@@ -1,0 +1,26 @@
+Name of card,cost,type,pos/neg,description,Expansion,Card Status,supply,Image,HP
+Amplify Vision,4,Spell,positive,"\Cast Charge your lowest cost unpowered conduit. Deal 3 \Damage. If all your conduits are powered, deal 4 \Damage instead.",First,,6,,3
+Bottomless Chest,5,Spell,positive,"Gain 1 \Money{} at the end of the casting phase. \newline \newline \Cast You may discard a boon gem. If you do, deal \Damage equal to its cost*2, otherwise deal 2 \Damage.",First,changed,6,,4
+Haste,5,Spell,positive,"While prepped, you may pay 2 \Money{} to cast a prepped spell you control immediately. \newline \newline \Cast Deal 5 \Damage.",First,changed,6,,3
+Feral Lightning,6,Spell,positive,This card may be played on an unpowered conduit as if it were powered. \newline \newline \Cast Deal 5 \Damage.,First,,6,,5
+Intellect's Charm,6,Spell,positive,\Cast Deal \Damage equal to the number of powered conduits you have * 2.,First,,6,,5
+Wolf's Howl,6,Spell,positive,\Cast Deal 6 \Damage. Deal 2 additional \Damage for each spell in an adjacent conduit.,First,changed,6,,5
+Science,5,Spell,positive,\Cast Deal \Damage equal to the charge cost of the conduit this card is prepped in * 2. Minimum 3 \Damage.,First,,6,,5
+Monstrous Inferno,8,Spell,positive,\WideSpell{MonstrousInferno} \newline \newline \Cast Deal 11 \Damage.,First,changed,6,,7
+Consuming Void,9,Spell,positive,\Cast \Trash up to 3 boons in hand. Deal \Damage equal to the number of boons destroyed times 4.,First,,6,,9
+Deck Smash,1,Relic,positive,Each player destroys the top card of their deck or discard pile or loses 4 life.,First,changed,1,,
+Smash,1,Relic,positive,"If there are no supplies of cards costing more than 4, deal \Justice*5 \Damage. Otherwise, Destroy 2 cards from the highest cost supply costing more than 4. ",First,changed,1,,
+Drain,1,Relic,positive,Each player uncharges a conduit or loses 4 life. (You can't uncharge past your starting configuration),First,changed,1,,
+Arcane Pig,1,Spell,positive,\Cast Deal 5*\Justice \Damage.,First,changed,1,,\Justice*2
+Morose Chicken,1,Spell,positive,\Cast Deal 3*\Justice \Damage.,First,changed,1,,\Justice*4
+Sparking Fire,1,Spell,positive,\Cast Deal 2*\Justice \Damage.,First,changed,1,,\Justice*5
+Flicking Eyelid,2,Spell,positive,\Cast Deal 9*\Justice \Damage.,First,changed,1,,\Justice*6
+Salivating Sock,2,Spell,positive,\Cast Deal 7*\Justice \Damage.,First,changed,1,,\Justice*7
+Toothless Rock,2,Spell,positive,\Cast Deal 11*\Justice \Damage.,First,changed,1,,\Justice*4
+Lightning Storm,2,Relic,positive,Prevent the first 6 damage dealt by each player this turn.,First,changed,1,,
+Corner Sword,2,Relic,positive,Each player must immediately destroy 2 Amethyst in hand or take 6 damage.,First,changed,1,,
+Dispel,2,Relic,positive,Each player discards their highest cost prepped spell or loses 6 life.,First,changed,1,,
+Hand Smash,0,Relic,positive,Each player discards a boon in hand or loses 2 life.,First,changed,1,,
+Jade Rat Spy,0,Relic,positive,"Each player gains 1 Tainted Jade. For each Tainted Jade that can’t be gained, deal 2 damage.",First,changed,1,,
+Orange Horse,0,Spell,positive,\Cast Deal 1*\Justice \Damage.,First,changed,1,,\Justice*2
+Quickly Fight,0,Spell,positive,\Cast Deal 2*\Justice \Damage.,First,changed,1,,\Justice

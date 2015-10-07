@@ -1,0 +1,158 @@
+\documentclass{article}
+\input{libs.tex}
+\input{colors.tex}
+\usepackage[none]{hyphenat}
+
+\pgfmathsetmacro{\cardwidth}{17.5}
+\pgfmathsetmacro{\cardheight}{12}
+\pgfmathsetmacro{\offset}{.5}
+\pgfmathsetmacro{\tw}{8cm}
+
+\def\shapeCard{(0,0) rectangle (\cardwidth,\cardheight)}
+
+\newcommand{\Money}{\includegraphics[height = .4cm]{money} }
+\newcommand{\Trash}{\includegraphics[height = .4cm]{trash} }
+\newcommand{\Damage}{\includegraphics[height = .4cm]{damage} }
+\newcommand{\Justice}{\includegraphics[height = .4cm]{Justice} }
+
+\newcommand{\cardborder}{
+    \draw[black] \shapeCard;
+}
+
+\newcommand{\basicinfo}{
+	\draw[ultra thick] (\cardwidth/2, \cardheight)--(\cardwidth/2, 0);
+	%\draw[ultra thick] (\cardwidth/2, \cardheight*2/3+2.5*\offset)--(\cardwidth, \cardheight*2/3+2.5*\offset);
+	\node[text width = \tw] at (\cardwidth*3/4, \cardheight*.5) {
+	\textbf{Turn Order:}\\
+	\small{\begin{enumerate}
+	\item Cast any Prepped Spells
+	\item In any order, any number of times:
+		\begin{enumerate}
+		\item Play Relic and Gem cards
+		\item Play Spells to Conduits. Each Spell occupies 1 Conduit. Each Conduit holds 1 Spell.
+		\item Buy cards
+		\item Charge (rent) or Power (own) Conduits. 
+		\end{enumerate}
+	\item Cast any Spells on Unpowered Conduits that were not Charged this turn.
+	\item Draw back up to your hand size.\\
+	\end{enumerate}}
+	
+	\textbf{Curse:} Any card containing \includegraphics[height = .6cm]{curse.png}.\\
+	\textbf{Boon:} Any card which isn't a curse.\\
+  \Money Mana: Purchasing power \\
+	\Trash Destroy: Remove from the game\\
+	\Damage Damage: How you win the game\\
+  \Justice Number of players \\
+	\hfill \break
+	\textbf{Adrenaline Rush:}\\ 
+	Triggers once health is 20 or lower. \\
+	All cards you buy may be placed on top of the recipient's deck.
+	};
+}
+
+\newcommand{\name}[1]{
+\node[text width = \tw] at (\cardwidth/4, \cardheight-\offset) {\LARGE{#1}};
+}
+
+
+\newcommand{\startingPrep}[8]{
+\pgfmathsetmacro{\conduitheight}{\cardheight*5/6-2*\offset}
+\node[text width = \tw] at (\cardwidth*1/4, \conduitheight+3*\offset) {Starting Conduits:};
+\node[rotate = 90*#2-90 ] at (\cardwidth*1/16, \conduitheight) {\includegraphics[height = 2cm]{#1}};
+\node[rotate = 90*#4-90 ] at (\cardwidth*3/16, \conduitheight) {\includegraphics[height = 2cm]{#3}};
+\node[rotate = 90*#6-90 ] at (\cardwidth*5/16, \conduitheight) {\includegraphics[height = 2cm]{#5}};
+\node[rotate = 90*#8-90 ] at (\cardwidth*7/16, \conduitheight) {\includegraphics[height = 2cm]{#7}};
+}
+%1 rent should be no rotation
+%2 should be 90?
+
+\newcommand{\startingHand}[6]{
+\pgfmathsetmacro{\handheight}{\cardheight/2}
+\node[text width = \tw] at (\cardwidth/4, \handheight+2*\offset) {Starting Hand: \hspace{1cm} Hand Size:#6  };
+\node at (\cardwidth*1/22, \handheight) {\includegraphics[height = 1cm]{#1}};
+\node at (\cardwidth*3/22, \handheight) {\includegraphics[height = 1cm]{#2}};
+\node at (\cardwidth*5/22, \handheight) {\includegraphics[height = 1cm]{#3}};
+\node at (\cardwidth*7/22, \handheight) {\includegraphics[height = 1cm]{#4}};
+\node at (\cardwidth*9/22, \handheight) {\includegraphics[height = 1cm]{#5}};
+}
+
+\newcommand{\startingDeck}[5]{
+\pgfmathsetmacro{\deckheight}{\cardheight/3}
+\node[text width = \tw] at (\cardwidth/4, \deckheight+2*\offset) {Starting Deck:};
+\node at (\cardwidth*1/22, \deckheight) {\includegraphics[height = 1cm]{#1}};
+\node at (\cardwidth*3/22, \deckheight) {\includegraphics[height = 1cm]{#2}};
+\node at (\cardwidth*5/22, \deckheight) {\includegraphics[height = 1cm]{#3}};
+\node at (\cardwidth*7/22, \deckheight) {\includegraphics[height = 1cm]{#4}};
+\node at (\cardwidth*9/22, \deckheight) {\includegraphics[height = 1cm]{#5}};
+}
+
+\newcommand{\ability}[1]{
+\node[text width = \tw] at (\cardwidth/4, \cardheight/6) {\textbf{Ability:}\\ #1};
+}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{Jian\space\space the \space\space Harbinger}
+\ability{14 \Money: Deal damage equal to the number of prepped spells you have times 2. You can accumulate \Money for this ability over several turns.}
+\startingPrep{own0.png}{1}{own2.png}{1}{rent3.png}{1}{rent4.png}{1}
+\startingDeck{Amethyst}{Amethyst}{Amethyst}{Spark}{Spark}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Spark}{Spark}{5}
+\end{tikzpicture}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{Sly \space\space Of \space\space The\space\space Hills}
+\ability{10 \Money: Draw 4 cards at the end of your turn. You can accumulate \Money for this ability over several turns. \newline Spells cast in your not initially unlocked conduits deal 1 additional damage.}
+\startingPrep{own0.png}{1}{blank.png}{1}{rent3.png}{4}{rent4.png}{4}
+\startingDeck{Amethyst}{Amethyst}{Ruby}{blank}{blank}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Amethyst}{blank}{4}
+\end{tikzpicture}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{The\space\space Elusive\space\space Mist}
+\ability{You may store up to 3 Mana here. You may spend this mana as normal.}
+\startingPrep{blank.png}{1}{rent2.png}{4}{rent3.png}{4}{rent4.png}{4}
+\startingDeck{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}{5}
+\end{tikzpicture}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{Ryn}
+\ability{10 \Money: During the casting phase, you may cast a spell and deal double damage. You can accumulate \Money for this ability over several turns. \newline Whenever you play a spell, gain 1 mana.}
+\startingPrep{own0.png}{1}{blank.png}{1}{blank.png}{1}{rent4.png}{1}
+\startingDeck{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Amethyst}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Amethyst}{5}
+\end{tikzpicture}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{Solar}
+\ability{5 \Money: You may place up to 3 cards from the top of your discard pile on top of your deck. You can accumulate \Money for this ability over several turns.}
+\startingPrep{own0.png}{1}{rent2.png}{1}{rent3.png}{1}{rent4.png}{1}
+\startingDeck{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}{5}
+\end{tikzpicture}
+
+\begin{tikzpicture} 
+\cardborder
+\basicinfo
+\name{Solar}
+\ability{5 \Money: You may place up to 3 cards from the top of your discard pile on top of your deck. You can accumulate \Money for this ability over several turns.}
+\startingPrep{own0.png}{1}{rent2.png}{1}{rent3.png}{1}{rent4.png}{1}
+\startingDeck{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}
+\startingHand{Amethyst}{Amethyst}{Amethyst}{Amethyst}{Spark}{5}
+\end{tikzpicture}
+
+\end{center}
+\end{document}

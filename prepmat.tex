@@ -1,0 +1,204 @@
+\documentclass[landscape]{article}
+%   Pakete dazuladen
+\input{libs.tex}
+%   Farbdefinitionen laden
+\input{colors.tex}
+
+
+\pgfmathsetmacro{\cardwidth}{6}
+\pgfmathsetmacro{\cardheight}{8.75}
+\pgfmathsetmacro{\offset}{.5}
+
+
+\def\shapeCard{(0,0) rectangle (\cardwidth,\cardheight)}
+
+\tikzset{
+    %   runde Ecken für die Karten
+    cardcorners/.style={
+        rounded corners=0.2cm
+    },
+}
+
+\newcommand{\Money}{\includegraphics[height = .4cm]{money} }
+\newcommand{\InvMoney}{\includegraphics[height = .4cm]{InvMoney}}
+\newcommand{\Damage}{\includegraphics[height = .4cm]{damage} }
+\newcommand{\Rot}{\includegraphics[height = .6cm]{rotate}}
+\newcommand{\Flip}{\includegraphics[height = .6cm]{flip}}
+
+\newcommand{\cardborder}{
+    \draw[black,cardcorners] \shapeCard;
+}
+
+\newcommand{\x}{
+		\clip[cardcorners] \shapeCard;
+		\draw[fill=white] (0,\cardheight)--(\cardwidth,\cardheight)--(\cardwidth/2,\cardheight/2)--cycle;
+		\draw[fill=white] (0,\cardheight)--(0,0)--(\cardwidth/2,\cardheight/2)--cycle;
+		\draw[fill=black] (0,0)--(\cardwidth,0)--(\cardwidth/2,\cardheight/2)--cycle;
+		\draw[fill=white] (\cardwidth,0)--(\cardwidth,\cardheight)--(\cardwidth/2,\cardheight/2)--cycle;
+}								
+		
+\newcommand{\rentfour}[1]{
+	\clip[cardcorners] \shapeCard;	
+	\node[rotate=270, text width=3.75cm] at (\cardwidth-\offset, \cardheight/2) {
+	\begin{center}
+	\color{black} \textbf{\Rot \\ #1 \Money :Power}
+	\end{center}
+	};
+	}
+	
+\newcommand{\rentthree}[1]{
+	\clip[cardcorners] \shapeCard;
+	\node[text width=3.75cm] at (\cardwidth/2, \cardheight-\offset) {
+	\begin{center}
+	\color{black} \textbf{\Rot \\ #1 \Money :Power}
+	\end{center}
+	};
+	}
+	
+
+\newcommand{\renttwo}[1]{
+	\clip[cardcorners] \shapeCard;
+	\node[rotate=90, text width=3.75cm] at (\offset, \cardheight/2) {
+	\begin{center}
+	\color{black} \textbf{\Rot \\ #1 \Money :Power}
+	\end{center}
+	};
+	
+}
+\newcommand{\rentone}[1]{
+	\clip[cardcorners] \shapeCard;
+	\node[text width=3.75cm, rotate = 180]  at (\cardwidth/2, \offset) {
+	\begin{center} \color{white} \textbf{\Flip \\ #1 \InvMoney :Power} \end{center}
+	};
+	
+}
+
+\newcommand{\cardbackground}[3]{
+		%\fill[unlockbg] \shapeCard;
+		\node at (\cardwidth/2,\cardheight/2) {\includegraphics[height = 3cm]{prepslot.pdf}};
+		\draw[fill = #3] (\cardwidth/2, \cardheight/2) circle (\offset);
+		\node[text width=3.75cm]  at (\cardwidth/2, 3*\offset) {
+	\begin{center} \color{black} \LARGE{\textbf{#1 \Money: Charge\\ Powered}} \end{center} %Power: #2
+	};
+	\node[text width=3.75cm]  at (\cardwidth/2, \cardheight-\offset) {
+	\begin{center} \color{black} \LARGE{\textbf{Conduit}} \end{center} %Power: #2
+	};
+}
+
+
+\newcommand{\costs}[2]{
+	\draw[fill= #2] (\cardwidth/2, \cardheight/2) circle (3.5*\offset);
+	\draw[fill=white] (\cardwidth/2-3.25*\offset,\cardheight/2-\offset)--(\cardwidth/2-3.25*\offset,\cardheight/2+\offset)--(\cardwidth/2+3.25*\offset,\cardheight/2+\offset)--(\cardwidth/2+3.25*\offset,\cardheight/2-\offset)--cycle;
+	\node[text width=3.75cm]  at (\cardwidth/2, \cardheight/2+.25*\offset) {
+	\begin{center} \color{black} \Large{\textbf{#1 \Money :Charge}} \end{center}
+	};
+	}
+	
+\newcommand{\extra}[1]{
+\node[text width=3.75 cm] at (\cardwidth/2,  \cardheight-3*\offset) {\begin{center} \large{\textbf{#1}} \end{center}};
+}
+\newcommand{\extrabg}[1]{
+\node[text width=3.75 cm] at (\cardwidth/2,  \cardheight-3*\offset) {\begin{center} \LARGE{\textbf{#1}} \end{center}};
+}
+
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{0}{0}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{2}
+\renttwo{3}
+\rentthree{4}
+\rentfour{5}
+\costs{2}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{3}
+\renttwo{5}
+\rentthree{7}
+\rentfour{9}
+\costs{3}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{4}
+\renttwo{7}
+\rentthree{10}
+\rentfour{13}
+\costs{4}{red}
+\end{tikzpicture} 
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{0}{0}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{2}
+\renttwo{3}
+\rentthree{4}
+\rentfour{5}
+\costs{2}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{3}
+\renttwo{5}
+\rentthree{7}
+\rentfour{9}
+\costs{3}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\x
+\rentone{4}
+\renttwo{7}
+\rentthree{10}
+\rentfour{13}
+\costs{4}{white}
+\end{tikzpicture} 
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{4}{10}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{3}{7}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{2}{4}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{0}{0}{red}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{4}{10}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{3}{7}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{2}{4}{white}
+\end{tikzpicture}
+\begin{tikzpicture} 
+\cardborder
+\cardbackground{0}{0}{white}
+\end{tikzpicture}
+
+\end{center}
+\end{document}

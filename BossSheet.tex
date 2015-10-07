@@ -1,0 +1,89 @@
+\documentclass{article}
+\input{libs.tex}
+\input{colors.tex}
+\usepackage[none]{hyphenat}
+
+\pgfmathsetmacro{\cardwidth}{17.5}
+\pgfmathsetmacro{\cardheight}{12}
+\pgfmathsetmacro{\squarewidth}{1}
+\pgfmathsetmacro{\squareheight}{1}
+\pgfmathsetmacro{\offset}{.5}
+\pgfmathsetmacro{\tw}{15cm}
+
+\def\shapeCard{(0,0) rectangle (\cardwidth,\cardheight)}
+
+\newcommand{\cardborder}{
+    \draw[black] \shapeCard;
+}
+
+\newcommand{\basicinfo}{
+	
+}
+
+\newcommand{\name}[1]{
+\node[below] at (\cardwidth/2, \cardheight-\offset/2) {\Huge{#1}};
+}
+
+
+\newcommand{\ability}[6]{
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*6.35/11) {\includegraphics[height = 1cm]{Marker}};
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*5.35/11) {\includegraphics[height = 1cm]{Marker}};
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*4.35/11) {\includegraphics[height = 1cm]{Marker}};
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*3.35/11) {\includegraphics[height = 1cm]{Marker}};
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*2.35/11) {\includegraphics[height = 1cm]{Marker}};
+\node[text width = \tw, below right] at (\cardwidth/10-1, \cardheight*1.35/11) {\includegraphics[height = 1cm]{Marker}};
+
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*6/11){\large{#1}};
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*5/11) {\large{#2}};
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*4/11) {\large{#3}};
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*3/11) {\large{#4}};
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*2/11) {\large{#5}};
+\node[text width = \tw, below right] at (\cardwidth/10, \cardheight*1/11) {\large{#6}};
+}
+
+\newcommand{\lifebox}[2]{
+    \draw (#1-\squarewidth/2, #2-\squareheight/2) rectangle (#1+\squarewidth/2, #2+\squareheight/2);
+}
+
+\newcommand{\levels}{
+\node[text width = 15cm, right] at (\cardwidth/12, \cardheight*8.5/11) {\small{The boss has 50 HP/player. (Ex: 2 players, 100 hp) The players have 50 + 10 HP/player past the first. (Ex: 3 players, 70 HP) After each players takes their turn, the boss takes a turn. The boss starts the game by performing 1 ability per turn. After 6 turns, it does 2 abilities per turn. After 3 more turns, it does 3 abilities per turn. After 4 more turns, the boss does 3 abilities per turn from its second set of abilities (see bottom of this page) until the game ends.}};
+\lifebox{\cardwidth/6}{\cardheight*6.75/11};
+\node at (\cardwidth/6, \cardheight*6.75/11) {\Large{1}};
+\lifebox{\cardwidth*2/6}{\cardheight*6.75/11};
+\node at (\cardwidth*2/6, \cardheight*6.75/11) {\Large{2}};
+\lifebox{\cardwidth*3/6}{\cardheight*6.75/11};
+\node at (\cardwidth*3/6, \cardheight*6.75/11) {\Large{3}};
+\lifebox{\cardwidth*4/6}{\cardheight*6.75/11};
+\node at (\cardwidth*4/6, \cardheight*6.75/11) {\Large{3}};
+\node at (\cardwidth*5/6, \cardheight*6.75/11) {\Large{FLIP}};
+}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+\begin{tikzpicture}
+\cardborder
+\name{Prorok The Sightless}
+\ability{Deal 1 Damage}{Each Player gains 1 Tainted Jade. For each Tainted Jade that can’t be gained, deal 1 damage.}{Deal 1 Damage}{Each player gains 1 Demon’s Levy. For each Demon’s Levy that can’t be gained, deal 1 damage.}{Deal 1 Damage}{Each player must discard 1 card or lose 1 life. }
+\levels
+\end{tikzpicture}
+\begin{tikzpicture}
+\cardborder
+\name{Prorok The Sightless}
+\ability{Deal 2 Damage}{Each player gains 1 Burning Opal. For each player that cannot, deal 3 damage.}{Deal 2 Damage}{Each player gains 1 Tainted Jade and 1 Demon's Levy. For each curse that can't be gained, deal 1 damage.}{Deal 2 Damage}{Each player must discard 2 cards or lose 2 life.}
+%\levels
+\end{tikzpicture}
+\begin{tikzpicture}
+\cardborder
+\name{Hakai The Purifier}
+\ability{Deal 1 Damage}{Destroy 2 cards from the highest cost supply.}{Deal 2 Damage}{Destroy the top card of each player�s discard pile or deck or lose 1 life.}{Deal 3 Damage}{Each player destroys a card in hand costing at least 1 or lose 1 life.}
+\levels
+\end{tikzpicture}
+\begin{tikzpicture}
+\cardborder
+\name{Hakai The Purifier}
+\ability{Deal 3 Damage}{Destroy 4 cards from the highest cost supply.}{Deal 4 Damage}{Destroy the top 2 cards of each player�s discard pile or deck or lose 2 life.}{Deal 5 Damage}{Each player destroys a card in hand costing at least 5 or lose 2 life.}
+%\levels
+\end{tikzpicture}
+\end{center}
+\end{document}
